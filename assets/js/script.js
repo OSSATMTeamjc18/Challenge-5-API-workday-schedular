@@ -151,6 +151,19 @@ function testingTheTime() {
 }
 testingTheTime();
 
+var y = [9, 10, 11, 12, 1, 2, 3, 4, 5];
 
+for (var i = 0; i < y.length; i++) {
+    var dataHour = localStorage.getItem(y[i]);
+    $(".form" + y[i]).val(dataHour);
+}
+
+$(".saveBtn").click(function() {
+    event.preventDefault();
+    var formValue = $(this).siblings(".form-control").val();
+    var listItem = $(this).parent().data("hour");
+
+    localStorage.setItem(listItem, formValue);
+});
 
 
