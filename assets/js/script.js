@@ -92,13 +92,65 @@ function testingTheTime() {
     time12Pm = moment().startOf('day').add(12, "hours");
     theCurrentTime = theCurrentTime.startOf("hour");
     if (theCurrentTime.isAfter(time12Pm)){
-        $(".form11").addClass("past");
+        $(".form12").addClass("past");
     } else if (theCurrentTime.isSame(time12Pm)) {
-        $(".form11").addClass("present");
+        $(".form12").addClass("present");
     } else if (theCurrentTime.isBefore(time12Pm)) {
-        $(".form11").addClass("future");
+        $(".form12").addClass("future");
     };
-
-
+    //adding my 1pm "time1Pm"
+    time1Pm = moment().startOf('day').add(13, "hours");
+    theCurrentTime = theCurrentTime.startOf("hour");
+    if (theCurrentTime.isAfter(time1Pm)){
+        $(".form1").addClass("past");
+    } else if (theCurrentTime.isSame(time1Pm)) {
+        $(".form1").addClass("present");
+    } else if (theCurrentTime.isBefore(time1Pm)) {
+        $(".form1").addClass("future");
+    };
+    //adding my 2PM "time2Pm"
+    time2Pm = moment().startOf('day').add(14, "hours");
+    theCurrentTime = theCurrentTime.startOf("hour");
+    if (theCurrentTime.isAfter(time2Pm)){
+        $(".form2").addClass("past");
+    } else if (theCurrentTime.isSame(time2Pm)) {
+        $(".form2").addClass("present");
+    } else if (theCurrentTime.isBefore(time2Pm)) {
+        $(".form2").addClass("future");
+    };
+    //adding my 3PM "time3Pm"
+    time3Pm = moment().startOf('day').add(15, "hours");
+    theCurrentTime = theCurrentTime.startOf("hour");
+    if (theCurrentTime.isAfter(time3Pm)){
+        $(".form3").addClass("past");
+    } else if (theCurrentTime.isSame(time3Pm)) {
+        $(".form3").addClass("present");
+    } else if (theCurrentTime.isBefore(time3Pm)) {
+        $(".form3").addClass("future");
+    };
+    //adding my 4PM "time4Pm"
+    time4Pm = moment().startOf('day').add(16, "hours");
+    theCurrentTime = theCurrentTime.startOf("hour");
+    if (theCurrentTime.isAfter(time4Pm)){
+        $(".form4").addClass("past");
+    } else if (theCurrentTime.isSame(time4Pm)) {
+        $(".form4").addClass("present");
+    } else if (theCurrentTime.isBefore(time4Pm)) {
+        $(".form4").addClass("future");
+    };
+    //adding my 5PM "time5Pm"
+    time5Pm = moment().startOf('day').add(17, "hours");
+    theCurrentTime = theCurrentTime.startOf("hour");
+    if (theCurrentTime.isAfter(time5Pm)) {
+        $(".form5").addClass("past");
+    } else if (theCurrentTime.isSame(time5Pm)) {
+        $(".form5").addClass("present");
+    } else if (theCurrentTime.isBefore(time5Pm)) {
+        $(".form5").addClass("future");
+    };
 }
+testingTheTime();
+
+
+
 
