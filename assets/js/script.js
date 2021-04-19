@@ -55,5 +55,50 @@ var time5Pm = beforeTime.add(1, "h");
 time5Pm = time5Pm.format('hh:mm A');
 $(".block9").text(time5Pm);
 
+//setting up my functions to test the time if it is in the past, present or future
 
+function testingTheTime() {
+    //adding my 9am "time9Am"
+    time9Am = moment().startOf('day').add(9, "hours");
+    theCurrentTime = theCurrentTime.startOf("hour");
+    if (theCurrentTime.isAfter(time9Am)){
+        $(".form9").addClass("past");
+    } else if (theCurrentTime.isSame(time9Am)) {
+        $(".form9").addClass("present");
+    } else if (theCurrentTime.isBefore(time9Am)) {
+        $(".form9").addClass("future");
+    };
+    //adding my 10am "time10Am"
+    time10Am = moment().startOf('day').add(10, "hours");
+    theCurrentTime = theCurrentTime.startOf("hour");
+    if (theCurrentTime.isAfter(time10Am)){
+        $(".form10").addClass("past");
+    } else if (theCurrentTime.isSame(time10Am)) {
+        $(".form10").addClass("present");
+    } else if (theCurrentTime.isBefore(time10Am)) {
+        $(".form10").addClass("future");
+    };
+    //adding my 11am "time11Am"
+    time11Am = moment().startOf('day').add(11, "hours");
+    theCurrentTime = theCurrentTime.startOf("hour");
+    if (theCurrentTime.isAfter(time11Am)){
+        $(".form11").addClass("past");
+    } else if (theCurrentTime.isSame(time11Am)) {
+        $(".form11").addClass("present");
+    } else if (theCurrentTime.isBefore(time11Am)) {
+        $(".form11").addClass("future");
+    };
+    //adding my 12pm "time12Pm"
+    time12Pm = moment().startOf('day').add(12, "hours");
+    theCurrentTime = theCurrentTime.startOf("hour");
+    if (theCurrentTime.isAfter(time12Pm)){
+        $(".form11").addClass("past");
+    } else if (theCurrentTime.isSame(time12Pm)) {
+        $(".form11").addClass("present");
+    } else if (theCurrentTime.isBefore(time12Pm)) {
+        $(".form11").addClass("future");
+    };
+
+
+}
 
